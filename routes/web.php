@@ -15,3 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/donation', [DonationController::class, 'index']);
+
+Route::get('/', function ()
+{
+    return view('home');
+})->name('home');
