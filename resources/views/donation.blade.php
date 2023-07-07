@@ -12,7 +12,7 @@
     </div>
 
     <div class="container mt-5">
-        <form action="#" id="donation_form">
+        <form action="{{ route('donation.store') }}" id="donation_form">
             <legend>Donation</legend>
             <div class="row">
 

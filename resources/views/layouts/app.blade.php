@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse container" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home') }}">Home</a>
+                        <a class="nav-link" href="{{ route('index') }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/donation">Donation</a>

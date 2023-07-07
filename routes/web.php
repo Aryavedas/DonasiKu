@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/donation', [DonationController::class, 'index']);
+Route::get('/', [DonationController::class, 'index'])->name('index');
 
-Route::get('/', function ()
-{
-    return view('home');
-})->name('home');
+Route::get('/donation', function (){
+    return view('donation');
+});
+
+Route::get('/store', [DonationController::class, 'store'])->name('donation.store');
