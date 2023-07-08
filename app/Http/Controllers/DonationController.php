@@ -29,7 +29,7 @@ class DonationController extends Controller
         $donation->donor_type = $validate['donation_type'];
         $donation->amount = $validate['amount'];
         $donation->note = $validate['note'];
-        // $donation->save();
+        $donation->save();
 
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = config('midtrans.server_key');
