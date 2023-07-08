@@ -10,7 +10,7 @@ class DonationController extends Controller
 {
     public function index()
     {
-        return view('donation');
+        return view('home');
     }
 
     public function store(Request $request)
@@ -29,7 +29,6 @@ class DonationController extends Controller
         $donation->donor_type = $validate['donation_type'];
         $donation->amount = $validate['amount'];
         $donation->note = $validate['note'];
-        $donation->save();
 
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = config('midtrans.server_key');
@@ -52,7 +51,33 @@ class DonationController extends Controller
         );
 
         $snapToken = \Midtrans\Snap::getSnapToken($params);
+        $donation->snap_token = $snapToken;
+        $donation->save();
 
         return view('chechkout', compact('snapToken', 'validate'));
+    }
+
+    public function afterPayment(Request $request)
+    {
+        // Next For Production
+        // $serverKey = config('midtrans.server_key');
+        // $hashed = hash("sha512", $request->order_id . $request->status_code . $request->gross_amount . $serverKey);
+        // if ($hashed == $request->signature_key) {
+        //     if ($request->transaction_status == "capture") {
+        //         $donation = new Donation();
+        //         $donation->status = "Paid";
+        //         $donation->save();
+        //     }
+        // }
+
+        $userKey = $request->query('userKey');
+        $donation = Donation::where('snap_token', $userKey)->first();
+
+        if ($donation) {
+            $donation->status = "Paid";
+            $donation->save();
+        }
+
+        return view('home');
     }
 }

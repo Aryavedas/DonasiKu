@@ -21,7 +21,7 @@ Route::get('/donation', function (){
 });
 
 Route::post('/store', [DonationController::class, 'store'])->name('donation.store');
-Route::get('/checkout', function ()
-{
+Route::get('/checkout', function (){
     return view('chechkout');
 });
+Route::get('/after-payment', [DonationController::class, 'afterPayment']);
