@@ -20,4 +20,8 @@ Route::get('/donation', function (){
     return view('donation');
 });
 
-Route::get('/store', [DonationController::class, 'store'])->name('donation.store');
+Route::post('/store', [DonationController::class, 'store'])->name('donation.store');
+Route::get('/checkout', function ()
+{
+    return view('chechkout');
+});

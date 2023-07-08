@@ -12,7 +12,8 @@
     </div>
 
     <div class="container mt-5">
-        <form action="{{ route('donation.store') }}" id="donation_form">
+        <form action="{{ route('donation.store') }}" id="donation_form" method="POST">
+            @csrf
             <legend>Donation</legend>
             <div class="row">
 
