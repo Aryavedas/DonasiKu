@@ -8,9 +8,11 @@ use App\Models\Donation;
 
 class DonationController extends Controller
 {
-    public function index()
+    public function index(Donation $donation)
     {
-        return view('home');
+        $totalDonations = Donation::where('status', 'Paid')->pluck('amount')->sum();
+
+        return view('home', compact('totalDonations'));
     }
 
     public function store(Request $request)
@@ -83,7 +85,17 @@ class DonationController extends Controller
 
     public function donationList(Donation $donation)
     {
-        $donations = $donation->all();
+
+        $donations = $donation->where('status', 'Paid')->paginate(10);
+
         return view('donation-list', compact('donations'));
     }
+
+    public function checkoutCancel(Request $request)
+    {
+        $donations = Donation::where('snap_token', $request->snap_token)->delete();
+
+        return view('donation');
+    }
+
 }

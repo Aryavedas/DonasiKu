@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('active-nav-donation-list', 'active-nav')
 @section('content')
     {{-- Jumbotron --}}
     <div class="jumbotron jumbotron-fluid p-5"
@@ -41,5 +41,9 @@
                 @endforelse
             </tbody>
         </table>
+
+        <div class="">
+            {{ $donations->links('pagination::bootstrap-5') }}
+        </div>
     </div>
 @endsection

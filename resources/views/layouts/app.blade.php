@@ -31,6 +31,18 @@
     .table .pending {
         background-color: #f8d7da; /* warna merah untuk status pending */
     }
+    .active-nav{
+        border-bottom: 5px solid black;
+    }
+
+    .card-header {
+  background-color: #6c757d; /* Warna aksen untuk header card */
+  color: #fff; /* Warna teks pada header card */
+}
+
+.card-body {
+  background-color: #f8f9fa; /* Warna aksen untuk body card */
+}
 </style>
 
 <body style="font-family: 'Poppins'; background-color: #F0F2F5">
@@ -51,13 +63,13 @@
             <div class="collapse navbar-collapse container" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('index') }}">Home</a>
+                        <a class="nav-link @yield('active-nav-home')" href="{{ route('index') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('donation') }}">Donation</a>
+                        <a class="nav-link @yield('active-nav-donation')" href="{{ route('donation') }}">Donation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('donation.list') }}">Donation List</a>
+                        <a class="nav-link @yield('active-nav-donation-list')" href="{{ route('donation.list') }}">Donation List</a>
                     </li>
                 </ul>
             </div>

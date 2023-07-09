@@ -28,3 +28,6 @@ Route::get('/after-payment', [DonationController::class, 'afterPayment']);
 
 //donation list
 Route::get('/donation-list', [DonationController::class, 'donationList'])->name('donation.list');
+
+// checkout cancel
+Route::get('/checkout-cancel', [DonationController::class, 'checkoutCancel'])->name('checkout.cancel');

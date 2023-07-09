@@ -41,6 +41,7 @@
                 </div>
                 <div class="text-center mt-4">
                     <button class="btn btn-primary" id="pay-button">Checkout</button>
+                    <a href="{{ route('checkout.cancel', ['snap_token' => $snapToken])  }}" class="btn btn-danger">Batal</a>
                 </div>
             </div>
         </div>

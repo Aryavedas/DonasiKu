@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('active-nav-home', 'active-nav')
 @section('content')
     <div class="container mt-3">
         {{-- Carousel  --}}
@@ -54,6 +54,33 @@
                 </svg>
             </button>
         </div>
+
+        {{-- Totdal Donation --}}
+        <a href="{{ route('donation.list') }}" class="text-decoration-none">
+            <div class="container">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-md-6">
+                        <div class="card rounded-lg">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <i class="fas fa-donate"></i> Total Donasi
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="display-4 text-center">
+                                    @if ($totalDonations !== null)
+                                        Rp.{{ number_format($totalDonations, 0, ',', '.') }}
+                                    @else
+                                        Donasi Kosong
+                                    @endif
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </a>
 
         {{-- Home Content --}}
         <div class="row" style="margin-top: 80px">
