@@ -18,10 +18,13 @@ Route::get('/', [DonationController::class, 'index'])->name('index');
 
 Route::get('/donation', function (){
     return view('donation');
-});
+})->name('donation');
 
 Route::post('/store', [DonationController::class, 'store'])->name('donation.store');
 Route::get('/checkout', function (){
     return view('chechkout');
 });
 Route::get('/after-payment', [DonationController::class, 'afterPayment']);
+
+//donation list
+Route::get('/donation-list', [DonationController::class, 'donationList'])->name('donation.list');

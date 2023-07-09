@@ -14,6 +14,25 @@
         rel="stylesheet">
 </head>
 
+<style>
+    .table {
+        font-size: 14px;
+    }
+    .table thead th {
+        font-weight: bold;
+        text-align: center;
+    }
+    .table tbody td {
+        text-align: center;
+    }
+    .table .paid {
+        background-color: #a3e9a4; /* warna hijau untuk status paid */
+    }
+    .table .pending {
+        background-color: #f8d7da; /* warna merah untuk status pending */
+    }
+</style>
+
 <body style="font-family: 'Poppins'; background-color: #F0F2F5">
 
     <!-- Navbar -->
@@ -35,7 +54,10 @@
                         <a class="nav-link" href="{{ route('index') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/donation">Donation</a>
+                        <a class="nav-link" href="{{ route('donation') }}">Donation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('donation.list') }}">Donation List</a>
                     </li>
                 </ul>
             </div>

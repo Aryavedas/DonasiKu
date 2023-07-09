@@ -80,4 +80,10 @@ class DonationController extends Controller
 
         return view('home');
     }
+
+    public function donationList(Donation $donation)
+    {
+        $donations = $donation->all();
+        return view('donation-list', compact('donations'));
+    }
 }

@@ -75,6 +75,7 @@
             <div class="col">
                 <h1>Memberi Harapan</h1>
                 <p class="mt-3 lh-lg">Bersedekah memberikan harapan kepada mereka yang sedang menghadapi kesulitan. Saat kita memberikan bantuan, kita tidak hanya memberikan bantuan materiil, tetapi juga memberikan dukungan emosional dan spiritual</p>
+                <a href="{{ route('donation.list') }}" class="btn btn-primary mt-3">Daftar Donasi</a>
             </div>
 
             <div class="col">
