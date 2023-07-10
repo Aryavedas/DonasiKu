@@ -19,31 +19,37 @@ Berikut adalah langkah-langkah untuk menginstal dan menjalankan aplikasi DonasiK
 2. Clone repositori ini ke direktori lokal Anda:
    ```bash
    git clone https://github.com/username/donasi-ku.git
-Masuk ke direktori proyek:
 
-cd donasi-ku
+3. Masuk ke direktori proyek:
 
-Salin file .env.example menjadi .env:
+    ```bash
+    cd donasi-ku
 
-cp .env.example .env
+4. Salin file .env.example menjadi .env:
 
-Buatlah kunci aplikasi baru dengan menjalankan perintah:
+    ```bash
+    cp .env.example .env
 
-php artisan key:generate
+5. Buatlah kunci aplikasi baru dengan menjalankan perintah:
 
-Atur konfigurasi database di file .env dengan mengisi DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, dan DB_PASSWORD sesuai dengan pengaturan lokal Anda.
+    ```bash
+    php artisan key:generate
 
-Jalankan migrasi database dan pengisian data awal:
+6. Atur konfigurasi database di file .env dengan mengisi DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, dan DB_PASSWORD sesuai dengan pengaturan lokal Anda.
 
-php artisan migrate --seed
+7. Jalankan migrasi database dan pengisian data awal:
 
-Jalankan server pengembangan lokal:
+    ```bash
+    php artisan migrate --seed
 
-php artisan serve
+8. Jalankan server pengembangan lokal:
 
-Akses aplikasi di browser melalui URL http://localhost:8000.
+    ```bash
+    php artisan serve
 
-Kontribusi
+9. Akses aplikasi di browser melalui URL http://localhost:8000.
+
+## Kontribusi
 Jika Anda ingin berkontribusi pada proyek ini, silakan lakukan langkah-langkah berikut:
 
 Fork repositori ini.
