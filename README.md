@@ -1,10 +1,23 @@
-# DonasiKu - Aplikasi Donasi menggunakan Laravel dan Midtrans
+![home page](https://github.com/Aryavedas/DonasiKu/assets/120029429/f1ff176d-90b2-4454-8b8c-202f3d5211ce)# DonasiKu - Aplikasi Donasi menggunakan Laravel dan Midtrans
 
 DonasiKu adalah sebuah aplikasi donasi yang dibangun menggunakan kerangka kerja Laravel dan menggunakan Midtrans sebagai payment gateway (saat ini masih dalam mode sandbox). Aplikasi ini memungkinkan pengguna untuk melakukan donasi secara online melalui berbagai metode pembayaran yang didukung oleh Midtrans.
 
 ## Menjalankan Sandbox Pembayaran Midtrans
 
 Untuk menjalankan simulasi pembayaran menggunakan Midtrans sandbox, Anda dapat mengakses halaman [ini](https://simulator.sandbox.midtrans.com/gopay/ui/index). Simulasi ini akan memungkinkan Anda untuk melakukan pembayaran menggunakan metode GoPay dalam mode sandbox.
+
+## Feature Preview
+1. Home Page
+![home page](https://github.com/Aryavedas/DonasiKu/assets/120029429/13a6f059-cf8a-419e-8820-5c6a54d45a91)
+
+2. Donation Page
+![donation page](https://github.com/Aryavedas/DonasiKu/assets/120029429/7a281cf0-6a87-4765-90a3-42c3c5475772)
+
+3. Donation List
+![donation list page](https://github.com/Aryavedas/DonasiKu/assets/120029429/53cc52f6-1720-4b1f-80ba-b15d201c463b)
+
+4. Payment Method
+![payment method page](https://github.com/Aryavedas/DonasiKu/assets/120029429/8a06e600-3d10-4347-b075-b9dc0bd1dc88)
 
 ## Instalasi
 
