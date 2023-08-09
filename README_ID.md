@@ -10,6 +10,19 @@ Untuk menjalankan simulasi pembayaran menggunakan Midtrans sandbox, Anda dapat m
 
 Pastikan untuk menggunakan **lingkungan sandbox** saat menguji dan mengembangkan aplikasi ini. Setelah selesai menguji, Anda dapat beralih ke lingkungan produksi Midtrans ketika aplikasi siap untuk digunakan secara nyata.
 
+## Feature Preview
+1. Home Page
+![home page](https://github.com/Aryavedas/DonasiKu/assets/120029429/13a6f059-cf8a-419e-8820-5c6a54d45a91)
+
+2. Donation Page
+![donation page](https://github.com/Aryavedas/DonasiKu/assets/120029429/7a281cf0-6a87-4765-90a3-42c3c5475772)
+
+3. Donation List
+![donation list page](https://github.com/Aryavedas/DonasiKu/assets/120029429/53cc52f6-1720-4b1f-80ba-b15d201c463b)
+
+4. Payment Method
+![payment method page](https://github.com/Aryavedas/DonasiKu/assets/120029429/8a06e600-3d10-4347-b075-b9dc0bd1dc88)
+
 ## Instalasi
 
 Berikut adalah langkah-langkah untuk menginstal dan menjalankan aplikasi DonasiKu di lingkungan lokal:
